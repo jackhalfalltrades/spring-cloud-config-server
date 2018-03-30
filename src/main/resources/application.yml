@@ -1,15 +1,15 @@
 spring:
   application:
-    name: mt1-cloud-config
+    name: ${APP_NAME}
   profiles:
     active:
-      - development
+      - ${ENV}
 server:
-  port: 60143
+  port: ${APP_PORT}
   ssl:
     enabled: true
     key-store: C:/Users/A1187557/Documents/SSL/keystore.jks
-    key-store-password: ${KEYSTORE_PASSWD}
+    key-store-password: ENC(bvyUqgivD+D5yK7PskZcKMNV/ufJaTVM)
 
 logging:
   level:
@@ -22,3 +22,6 @@ spring:
       server:
         git:
           uri: file:\\\C:\Users\A1187557\Documents\git-local-repo\service-properties\
+jasypt:
+  encryptor:
+    password: ${APP_SEC_PASSWD}
