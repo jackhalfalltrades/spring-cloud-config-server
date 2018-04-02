@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://code.bestbuy.com/stash/scm/mos/service-properties.git
-          username: chandrakanth.peravalli
-          password: Jboss@33
+          uri: <git url for service properties>
+          username:
+          password:
         bootstrap: true
