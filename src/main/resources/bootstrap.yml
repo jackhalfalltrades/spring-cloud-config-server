@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: <git url for service properties>
-          username:
-          password:
+          uri: ${GIT_REPO_SERVICE_PROPERTIES}
+          username: ${GIT_REPO_USERNAME}
+          password: ${GIT_REPO_PASSWD}
         bootstrap: true
